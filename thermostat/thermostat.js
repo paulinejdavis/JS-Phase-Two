@@ -6,6 +6,29 @@ class Thermostat {
     getTemperature() {
         return this.temperature;
     }
+
+    up() {
+        this.temperature++;
+        if (this.temperature > 25)  {
+            this.temperature = 25 
+            
+        }
+        if (this.temperature > 32)  {
+ this.temperature = 32
+            
+        }
+    }
+
+    down() {
+        this.temperature--;
+        if (this.temperature < 10) this.temperature = 10; 
+          
+    }
+
+    reset() {
+        this.temperature = 20;    
+    }
+        
 }
 
 module.exports = Thermostat
